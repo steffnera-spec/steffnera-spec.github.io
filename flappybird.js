@@ -106,7 +106,7 @@ function update() {
     //score
     context.fillStyle = "white";
     context.font="45px sans-serif";
-    context.fillText(score, 5, 45);
+    context.fillText(score+" år", 5, 45);
 
     if (gameOver) {
         context.fillText("GAME OVER", 5, 90);
