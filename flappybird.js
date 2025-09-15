@@ -104,18 +104,18 @@ function update() {
     }
 
     //score
-    context.fillStyle = "white";
+    context.fillStyle = "blue";
     context.font="30px sans-serif";
     let scoreText = `${score} År`;
     context.fillText(scoreText, 5, 40);
 
     if (gameOver && (score<60)) { 
         context.fillText("GAME OVER!", 5, 80);
-        context.fillText("Pappa vann", 5, 110);
+        context.fillText("Pappa vann", 5, 120);
     }
     if (gameOver && (score>59)) {
         context.fillText("GRATTIS!!", 5, 80);
-        context.fillText("Du är stor nu", 5, 110);
+        context.fillText("Du är stor nu", 5, 120);
     }
 }
 
