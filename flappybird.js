@@ -123,7 +123,7 @@ function placePipes() {
     if (gameOver) {
         return;
     }
-    if (score>59) {  
+    if (score<=60) {  
         //(0-1) * pipeHeight/2.
         // 0 -> -128 (pipeHeight/4)
         // 1 -> -128 - 256 (pipeHeight/4 - pipeHeight/2) = -3/4 pipeHeight
@@ -172,3 +172,4 @@ function detectCollision(a, b) {
            a.y + a.height > b.y;    //a's bottom left corner passes b's top left corner
 
 }
+
