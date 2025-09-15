@@ -109,16 +109,13 @@ function update() {
     let scoreText = `${score} År`;
     context.fillText(scoreText, 5, 40);
 
-    if (gameOver) { 
-        if (score<60){
-            context.fillText("GAME OVER!", 5, 80);
-            context.fillText("Pappa vann", 5, 110);
-        }
-        else{
-            context.fillText("GRATTIS!!", 5, 80);
-            context.fillText("Du är stor nu", 5, 110);
-        }
-
+    if (gameOver && (score<60)) { 
+        context.fillText("GAME OVER!", 5, 80);
+        context.fillText("Pappa vann", 5, 110);
+    }
+    if (gameOver && (score>59)) {
+        context.fillText("GRATTIS!!", 5, 80);
+        context.fillText("Du är stor nu", 5, 110);
     }
 }
 
