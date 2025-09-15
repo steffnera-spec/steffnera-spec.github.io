@@ -114,7 +114,7 @@ function update() {
             context.fillText("GAME OVER!", 5, 80);
             context.fillText("Pappa vann", 5, 110);
         }
-        if (score>=60){
+        if (score>59){
             context.fillText("GRATTIS!!", 5, 80);
             context.fillText("Du är stor nu", 5, 110);
         }
