@@ -76,7 +76,7 @@ function update() {
     velocityY += gravity;
     // bird.y += velocityY;
     bird.y = Math.max(bird.y + velocityY, 0); //apply gravity to current bird.y, limit the bird.y to top of the canvas
-    context.drawImage(birdImg, bird.x, bird.y, bird.width*2, bird.height*2);
+    context.drawImage(birdImg, bird.x-15, bird.y-10, bird.width*2, bird.height*2);
 
     if (bird.y > board.height) {
         gameOver = true;
@@ -172,4 +172,5 @@ function detectCollision(a, b) {
            a.y + a.height > b.y;    //a's bottom left corner passes b's top left corner
 
 }
+
 
