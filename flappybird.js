@@ -115,7 +115,7 @@ function update() {
     }
     if (score>59) {
         context.fillText("GRATTIS!!!", 5, 80);
-        context.fillText("Du är STOR nu", 5, 120);
+        context.fillText("Du är STOR", 5, 120);
     }
 }
 
@@ -172,6 +172,7 @@ function detectCollision(a, b) {
            a.y + a.height > b.y;    //a's bottom left corner passes b's top left corner
 
 }
+
 
 
 
