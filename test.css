@@ -1,0 +1,25 @@
+
+
+html,
+body {
+  height: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+canvas {
+  border: solid;
+  display: block;
+  margin: auto;
+  width: 80%;
+  top: 10vw;
+  position: relative;
+}
+
+p {
+  position: relative;
+  top: 15vh;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
