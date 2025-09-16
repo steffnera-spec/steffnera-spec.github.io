@@ -136,9 +136,10 @@ function update() {
         context.fillText("STOR", 5, 160);
     }
     //confetti
-    if (score>2){
+    if (score>=1){
+        let temp=1
         if (confettiX<=-confettiWidth){confettiX = 0;} 
-        else{confettiX = confettiX-confettiFrameWidth;}
+        else if (temp<0){confettiX = confettiX-confettiFrameWidth;temp=-temp;}
         context.drawImage(confettiImg, confettiX, confettiY, confettiWidth, confettiHeight);
     }
 }
@@ -204,6 +205,7 @@ function detectCollision(a, b) {
            a.y + a.height > b.y;    //a's bottom left corner passes b's top left corner
 
 }
+
 
 
 
