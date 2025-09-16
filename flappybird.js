@@ -37,6 +37,7 @@ let confettiY = boardHeight-confettiHeight;
 let confettiImg;
 let confettiFrameWidth = 360;
 let confettiFrameHight = 640;
+let temp=1;
 
 //physics
 let velocityX = -2; //pipes moving left speed
@@ -137,7 +138,6 @@ function update() {
     }
     //confetti
     if (score>=1){
-        let temp=1
         if (confettiX<=-confettiWidth){confettiX = 0;} 
         else if (temp<0){confettiX = confettiX-confettiFrameWidth;temp=-temp;}
         context.drawImage(confettiImg, confettiX, confettiY, confettiWidth, confettiHeight);
@@ -205,6 +205,7 @@ function detectCollision(a, b) {
            a.y + a.height > b.y;    //a's bottom left corner passes b's top left corner
 
 }
+
 
 
 
