@@ -113,11 +113,13 @@ function update() {
         context.fillText("GAME OVER!", 5, 80);
         context.fillText("Pappa är", 5, 120);
         context.fillText("STÖRST", 5, 160);
+        context.drawImage("./00-38-53-341_512.gif",0,boardHeight,boardWidth,boardWidth);
     }
     if (score>59) {
         context.fillText("GRATTIS!!", 5, 80);
         context.fillText("Du är", 5, 120);
         context.fillText("STOR", 5, 160);
+        context.drawImage("./00-38-53-341_512.gif",0,boardHeight,boardWidth,boardWidth);
     }
 }
 
@@ -182,6 +184,7 @@ function detectCollision(a, b) {
            a.y + a.height > b.y;    //a's bottom left corner passes b's top left corner
 
 }
+
 
 
 
