@@ -33,7 +33,7 @@ let bottomPipeImg;
 let confettiWidth = 550;
 let confettiHeight = 50;
 let confettiX = 0;
-let confettiY = boardHeight-confettiHeight;
+let confettiY = boardHeight-10*confettiHeight;
 let confettiImg;
 let confettiFrameWidth = 50;
 let confettiFrameHight = 50;
@@ -141,9 +141,9 @@ function update() {
             confettiX = 0; 
         } 
         else{
-            confettiX = confettiX-confettiFrameWidth;
+            confettiX = confettiX-10*confettiFrameWidth;
         }
-        context.drawImage(confettiImg, confettiX, confettiY, confettiWidth, confettiHeight);
+        context.drawImage(confettiImg, confettiX, confettiY, 10*confettiWidth, 10*confettiHeight);
     }
 }
 
@@ -208,6 +208,7 @@ function detectCollision(a, b) {
            a.y + a.height > b.y;    //a's bottom left corner passes b's top left corner
 
 }
+
 
 
 
