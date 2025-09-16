@@ -136,7 +136,7 @@ function update() {
      //confetti
     if (score>2){
         if (confettiY<1000){ confettiY = confettiHeight+140; } 
-        else{confettiY = confettiY-confettiFrameHight}
+        else{confettiY = confettiY-confettiFrameHight;}
         context.drawImage(confettiImg, confettiX, confettiY, confettiWidth, confettiHeight);
     }
 }
@@ -202,6 +202,7 @@ function detectCollision(a, b) {
            a.y + a.height > b.y;    //a's bottom left corner passes b's top left corner
 
 }
+
 
 
 
