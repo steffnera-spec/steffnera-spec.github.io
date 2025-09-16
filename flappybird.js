@@ -69,7 +69,7 @@ window.onload = function() {
     bottomPipeImg.src = "./bottompipe.png";
 
     context.fillText("confetti", 5, 160);
-    confettiImg = new image();
+    confettiImg = new Image();
     confettiImg.src = "./confetti.png";
     
     
@@ -208,6 +208,7 @@ function detectCollision(a, b) {
            a.y + a.height > b.y;    //a's bottom left corner passes b's top left corner
 
 }
+
 
 
 
