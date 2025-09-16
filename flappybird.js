@@ -30,13 +30,13 @@ let topPipeImg;
 let bottomPipeImg;
 
 //confetti
-let confettiWidth = 340;
-let confettiHeight = 37500;
+let confettiWidth = 550;
+let confettiHeight = 50;
 let confettiX = 0;
-let confettiY = confettiHeight+140;
+let confettiY = boardHeight;
 let confettiImg;
-let confettiFrameWidth = 340;
-let confettiFrameHight = 500;
+let confettiFrameWidth = 50;
+let confettiFrameHight = 50;
 
 //physics
 let velocityX = -2; //pipes moving left speed
@@ -137,11 +137,11 @@ function update() {
     }
     //confetti
     if (score>2){
-        if (confettiY<1000){ 
-            confettiY = confettiHeight+140; 
+        if (confettiX=<confettiFrameWidth-confettiWidth){ 
+            confettiX = 0; 
         } 
         else{
-            confettiY = confettiY-confettiFrameHight;
+            confettiX = confettiX-confettiFrameWidth;
         }
         context.drawImage(confettiImg, confettiX, confettiY, confettiWidth, confettiHeight);
     }
@@ -208,6 +208,7 @@ function detectCollision(a, b) {
            a.y + a.height > b.y;    //a's bottom left corner passes b's top left corner
 
 }
+
 
 
 
