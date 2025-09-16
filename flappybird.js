@@ -129,7 +129,7 @@ function placePipes() {
         //(0-1) * pipeHeight/2.
         // 0 -> -128 (pipeHeight/4)
         // 1 -> -128 - 256 (pipeHeight/4 - pipeHeight/2) = -3/4 pipeHeight
-        if (score <=47){
+        if (Math.random() <= 0.9){
             let randomPipeY = pipeY - pipeHeight/4 - Math.random()*(pipeHeight/2);
             let openingSpace = board.height/3;
         }
@@ -180,6 +180,7 @@ function detectCollision(a, b) {
            a.y + a.height > b.y;    //a's bottom left corner passes b's top left corner
 
 }
+
 
 
 
