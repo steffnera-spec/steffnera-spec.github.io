@@ -119,7 +119,15 @@ function update() {
     while (pipeArray.length > 0 && pipeArray[0].x < -pipeWidth) {
         pipeArray.shift(); //removes first element from the array
     }
-
+    
+        //confetti
+    if (score>=60){
+        if (confettiX<=-confettiWidth){confettiX = 0;} 
+        else if (temp<0){confettiX = confettiX-confettiFrameWidth;}
+        temp=-temp;
+        context.drawImage(confettiImg, confettiX, confettiY, confettiWidth, confettiHeight);
+    }
+    
     //score
     context.fillStyle = "blue";
     context.font="30px sans-serif";
@@ -136,13 +144,7 @@ function update() {
         context.fillText("Nu är du", 5, 120);
         context.fillText("STOR", 5, 160);
     }
-    //confetti
-    if (score>=1){
-        if (confettiX<=-confettiWidth){confettiX = 0;} 
-        else if (temp<0){confettiX = confettiX-confettiFrameWidth;}
-        temp=-temp;
-        context.drawImage(confettiImg, confettiX, confettiY, confettiWidth, confettiHeight);
-    }
+
 }
 
 function placePipes() {
@@ -206,6 +208,7 @@ function detectCollision(a, b) {
            a.y + a.height > b.y;    //a's bottom left corner passes b's top left corner
 
 }
+
 
 
 
