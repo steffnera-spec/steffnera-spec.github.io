@@ -111,11 +111,13 @@ function update() {
 
     if (gameOver && (score<60)) { 
         context.fillText("GAME OVER!", 5, 80);
-        context.fillText("Pappa är STÖRST", 5, 120);
+        context.fillText("Pappa är", 5, 120);
+        context.fillText("STÖRST", 5, 160);
     }
     if (score>59) {
-        context.fillText("GRATTIS!!!", 5, 80);
-        context.fillText("Du är STOR", 5, 120);
+        context.fillText("GRATTIS!!", 5, 80);
+        context.fillText("Du är", 5, 120);
+        context.fillText("STOR", 5, 120);
     }
 }
 
@@ -172,6 +174,7 @@ function detectCollision(a, b) {
            a.y + a.height > b.y;    //a's bottom left corner passes b's top left corner
 
 }
+
 
 
 
