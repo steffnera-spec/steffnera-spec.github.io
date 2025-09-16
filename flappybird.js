@@ -68,8 +68,10 @@ window.onload = function() {
     bottomPipeImg = new Image();
     bottomPipeImg.src = "./bottompipe.png";
 
-    //confettiImg = new image();
-    //confettiImg.src = "./ezgif-4bda9e1b49c32f.png";
+    context.fillText("confetti", 5, 160);
+    confettiImg = new image();
+    confettiImg.src = "./confetti.png";
+    
     
     requestAnimationFrame(update);
     setInterval(placePipes, 1500); //every 1.5 seconds
@@ -206,6 +208,7 @@ function detectCollision(a, b) {
            a.y + a.height > b.y;    //a's bottom left corner passes b's top left corner
 
 }
+
 
 
 
