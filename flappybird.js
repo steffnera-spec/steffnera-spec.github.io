@@ -32,7 +32,7 @@ let bottomPipeImg;
 //confetti
 let confettiWidth = 550;
 let confettiHeight = 50;
-let confettiX = 0;
+let confettiX = -70;
 let confettiY = boardHeight-10*confettiHeight;
 let confettiImg;
 let confettiFrameWidth = 50;
@@ -138,7 +138,7 @@ function update() {
     //confetti
     if (score>2){
         if (confettiX<=-confettiWidth){ 
-            confettiX = 0; 
+            confettiX = -70; 
         } 
         else{
             confettiX = confettiX-10*confettiFrameWidth;
@@ -208,6 +208,7 @@ function detectCollision(a, b) {
            a.y + a.height > b.y;    //a's bottom left corner passes b's top left corner
 
 }
+
 
 
 
