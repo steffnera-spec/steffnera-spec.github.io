@@ -30,12 +30,13 @@ let topPipeImg;
 let bottomPipeImg;
 
 //confetti
-let confettiWidth = 340; //width/height ratio = 408/228 = 17/12
+let confettiWidth = 340;
 let confettiHeight = 37500;
 let confettiX = 0;
 let confettiY = confettiHeight+140;
 let confettiImg;
-
+let confettiFrameWidth = 340;
+let confettiFrameHight = 500;
 
 //physics
 let velocityX = -2; //pipes moving left speed
@@ -50,7 +51,6 @@ window.onload = function() {
     board.height = boardHeight;
     board.width = boardWidth;
     context = board.getContext("2d"); //used for drawing on the board
-
     //draw flappy bird
     // context.fillStyle = "green";
     // context.fillRect(bird.x, bird.y, bird.width, bird.height);
@@ -136,7 +136,7 @@ function update() {
      //confetti
     if (score>2){
         if (confettiY<1000){ confettiY = confettiHeight+140; } 
-        else(confettiY = confettiY-500)
+        else{confettiY = confettiY-confettiFrameHight}
         context.drawImage(confettiImg, confettiX, confettiY, confettiWidth, confettiHeight);
     }
 }
@@ -202,6 +202,7 @@ function detectCollision(a, b) {
            a.y + a.height > b.y;    //a's bottom left corner passes b's top left corner
 
 }
+
 
 
 
