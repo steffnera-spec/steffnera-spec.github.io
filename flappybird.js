@@ -29,6 +29,14 @@ let pipeY = 0;
 let topPipeImg;
 let bottomPipeImg;
 
+//confetti
+let confettiWidth = 340; //width/height ratio = 408/228 = 17/12
+let confettiHeight = 37500;
+let confettiX = 0;
+let confettiY = confettiHeight+140;
+let confettiImg;
+
+
 //physics
 let velocityX = -2; //pipes moving left speed
 let velocityY = 0; //bird jump speed
@@ -60,6 +68,9 @@ window.onload = function() {
     bottomPipeImg = new Image();
     bottomPipeImg.src = "./bottompipe.png";
 
+    confettiImg = new image();
+    confettiImg.src = "./ezgif-4bda9e1b49c32f.png"
+    
     requestAnimationFrame(update);
     setInterval(placePipes, 1500); //every 1.5 seconds
     document.addEventListener("click", moveBird);
@@ -98,6 +109,9 @@ function update() {
         }
     }
 
+   
+    
+
     //clear pipes
     while (pipeArray.length > 0 && pipeArray[0].x < -pipeWidth) {
         pipeArray.shift(); //removes first element from the array
@@ -113,13 +127,17 @@ function update() {
         context.fillText("GAME OVER!", 5, 80);
         context.fillText("Pappa är", 5, 120);
         context.fillText("STÖRST", 5, 160);
-        context.drawImage("./00-38-53-341_512.gif",0,boardHeight,boardWidth,boardWidth);
     }
     if (score>59) {
         context.fillText("GRATTIS!!", 5, 80);
-        context.fillText("Du är", 5, 120);
+        context.fillText("Nu är du", 5, 120);
         context.fillText("STOR", 5, 160);
-        context.drawImage("./00-38-53-341_512.gif",0,boardHeight,boardWidth,boardWidth);
+    }
+     //confetti
+    if (score>2){
+        if (confettiY<1000){ confettiY = confettiHeight+140; } 
+        else(confettiY = confettiY-500)
+        context.drawImage(confettiImg, confettiX, confettiY, confettiWidth, confettiHeight);
     }
 }
 
@@ -184,6 +202,7 @@ function detectCollision(a, b) {
            a.y + a.height > b.y;    //a's bottom left corner passes b's top left corner
 
 }
+
 
 
 
