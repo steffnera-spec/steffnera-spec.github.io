@@ -33,7 +33,7 @@ let bottomPipeImg;
 let confettiWidth = 550;
 let confettiHeight = 50;
 let confettiX = 0;
-let confettiY = boardHeight-confettiHight;
+let confettiY = boardHeight-confettiHeight;
 let confettiImg;
 let confettiFrameWidth = 50;
 let confettiFrameHight = 50;
@@ -208,6 +208,7 @@ function detectCollision(a, b) {
            a.y + a.height > b.y;    //a's bottom left corner passes b's top left corner
 
 }
+
 
 
 
