@@ -137,7 +137,7 @@ function update() {
     }
     //confetti
     if (score>2){
-        if (confettiX=<confettiFrameWidth-confettiWidth){ 
+        if (confettiX<=-confettiWidth){ 
             confettiX = 0; 
         } 
         else{
@@ -208,6 +208,7 @@ function detectCollision(a, b) {
            a.y + a.height > b.y;    //a's bottom left corner passes b's top left corner
 
 }
+
 
 
 
