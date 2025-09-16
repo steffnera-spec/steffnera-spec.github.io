@@ -30,13 +30,13 @@ let topPipeImg;
 let bottomPipeImg;
 
 //confetti
-let confettiWidth = 340;
-let confettiHeight = 37500;
-let confettiX = 0;
-let confettiY = confettiHeight+140;
-let confettiImg;
-let confettiFrameWidth = 340;
-let confettiFrameHight = 500;
+//let confettiWidth = 340;
+//let confettiHeight = 37500;
+//let confettiX = 0;
+//let confettiY = confettiHeight+140;
+//let confettiImg;
+//let confettiFrameWidth = 340;
+//let confettiFrameHight = 500;
 
 //physics
 let velocityX = -2; //pipes moving left speed
@@ -68,8 +68,8 @@ window.onload = function() {
     bottomPipeImg = new Image();
     bottomPipeImg.src = "./bottompipe.png";
 
-    confettiImg = new image();
-    confettiImg.src = "./ezgif-4bda9e1b49c32f.png"
+    //confettiImg = new image();
+    //confettiImg.src = "./ezgif-4bda9e1b49c32f.png"
     
     requestAnimationFrame(update);
     setInterval(placePipes, 1500); //every 1.5 seconds
@@ -133,12 +133,16 @@ function update() {
         context.fillText("Nu är du", 5, 120);
         context.fillText("STOR", 5, 160);
     }
-     //confetti
-    if (score>2){
-        if (confettiY<1000){ confettiY = confettiHeight+140; } 
-        else{confettiY = confettiY-confettiFrameHight;}
-        context.drawImage(confettiImg, confettiX, confettiY, confettiWidth, confettiHeight);
-    }
+    //confetti
+    //if (score>2){
+    //    if (confettiY<1000){ 
+    //        confettiY = confettiHeight+140; 
+    //    } 
+    //    else{
+    //        confettiY = confettiY-confettiFrameHight;
+    //    }
+    //    context.drawImage(confettiImg, confettiX, confettiY, confettiWidth, confettiHeight);
+    //}
 }
 
 function placePipes() {
@@ -202,6 +206,7 @@ function detectCollision(a, b) {
            a.y + a.height > b.y;    //a's bottom left corner passes b's top left corner
 
 }
+
 
 
 
