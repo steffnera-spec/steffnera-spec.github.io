@@ -143,7 +143,7 @@ function update() {
         else{
             confettiY = confettiY-confettiFrameHight;
         }
-        //context.drawImage(confettiImg, confettiX, confettiY, confettiWidth, confettiHeight);
+        context.drawImage(confettiImg, confettiX, confettiY, confettiWidth, confettiHeight);
     }
 }
 
@@ -208,6 +208,7 @@ function detectCollision(a, b) {
            a.y + a.height > b.y;    //a's bottom left corner passes b's top left corner
 
 }
+
 
 
 
