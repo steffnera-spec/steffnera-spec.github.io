@@ -30,13 +30,13 @@ let topPipeImg;
 let bottomPipeImg;
 
 //confetti
-//let confettiWidth = 340;
-//let confettiHeight = 37500;
-//let confettiX = 0;
-//let confettiY = confettiHeight+140;
-//let confettiImg;
-//let confettiFrameWidth = 340;
-//let confettiFrameHight = 500;
+let confettiWidth = 340;
+let confettiHeight = 37500;
+let confettiX = 0;
+let confettiY = confettiHeight+140;
+let confettiImg;
+let confettiFrameWidth = 340;
+let confettiFrameHight = 500;
 
 //physics
 let velocityX = -2; //pipes moving left speed
@@ -206,6 +206,7 @@ function detectCollision(a, b) {
            a.y + a.height > b.y;    //a's bottom left corner passes b's top left corner
 
 }
+
 
 
 
