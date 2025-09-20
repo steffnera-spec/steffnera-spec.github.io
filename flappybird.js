@@ -192,6 +192,43 @@ function placePipes() {
         }
         pipeArray.push(bottomPipe);
     }
+    else{
+        let randomPipeY;
+        let openingSpace;
+        let rand =Math.random();
+        if ( rand<= 0.1){
+            randomPipeY = pipeY - pipeHeight/4 - Math.random()*(pipeHeight/2);
+            openingSpace = board.height/3;
+        }
+        else if (rand <= 0.6){
+            randomPipeY = pipeY - pipeHeight/4 - Math.random()*(pipeHeight/2);
+            openingSpace = board.height/4; 
+        }
+        else {
+            randomPipeY = pipeY - pipeHeight/4 - Math.random()*(pipeHeight/2);
+            openingSpace = board.height/4.5; 
+        }
+    
+        let topPipe = {
+            img : topPipeImg,
+            x : pipeX,
+            y : randomPipeY,
+            width : pipeWidth,
+            height : pipeHeight,
+            passed : false
+        }
+        pipeArray.push(topPipe);
+    
+        let bottomPipe = {
+            img : bottomPipeImg,
+            x : pipeX,
+            y : randomPipeY + pipeHeight + openingSpace,
+            width : pipeWidth,
+            height : pipeHeight,
+            passed : false
+        }
+        pipeArray.push(bottomPipe);
+    }
 }
 
 function moveBird() {
@@ -214,6 +251,7 @@ function detectCollision(a, b) {
            a.y + a.height > b.y;    //a's bottom left corner passes b's top left corner
 
 }
+
 
 
 
